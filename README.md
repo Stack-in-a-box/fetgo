@@ -1,4 +1,4 @@
-# FetGo
+# <img src="icon.png" alt="Icon" height="23px"> FetGo
 
 ## Development
 
