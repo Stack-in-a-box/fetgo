@@ -1,26 +1,27 @@
 import React from "react";
-import { Button, CheckBox, StyleSheet, Text, TextInput, View } from "react-native";
+import SimpleText from "components/SimpleText";
+import { Button, CheckBox, StyleSheet, TextInput, View } from "react-native";
 import { Component } from "react";
 
 export default class LoginView extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Welcome to FetGo</Text>
-                <Text>Please log into your FetLife account to continue…</Text>
+                <SimpleText>Welcome to FetGo</SimpleText>
+                <SimpleText>Please log into your FetLife account to continue…</SimpleText>
                 <View>
                     <View>
                         <View>
-                            <Text>Username / email address:</Text>
+                            <SimpleText>Username / email address:</SimpleText>
                             <TextInput />
                         </View>
                         <View>
-                            <Text>Password:</Text>
+                            <SimpleText>Password:</SimpleText>
                             <TextInput />
                         </View>
                         <View>
                             <CheckBox />
-                            <Text>Remember me</Text>
+                            <SimpleText>Remember me</SimpleText>
                         </View>
                     </View>
                     <View>
@@ -40,5 +41,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "black",
     }
 });
