@@ -9,9 +9,18 @@
 3. When the installer has finished, a terminal window will appear for the aforementioned build tools. Press any key twice to start them installing.
 4. Press _[Enter]_ when prompted to close the window, once installation has finished.
 
+### npm
+
+1. Open a PowerShell instance (assuming Node was added to the path during its install).
+2. Change the PowerShell working directory to the root of the repo once you’ve cloned it to your machine.
+3. Issue the following command to install all of the repository’s dependencies:
+```
+npm install
+```
+
 ### Yarn
 
-1. Open a an elevated (as an admin) PowerShell instance (assuming Node was added to the path during its install).
+1. Open an elevated (as an admin) PowerShell instance.
 2. Issue the following command to install Yarn:
 ```
 choco install yarn
@@ -24,7 +33,7 @@ choco install yarn
 ```
 npm install -g expo-cli
 ```
-2. Change the PowerShell working directory to the root of the repo once you’ve cloned it to your machine.
+2. Change the PowerShell working directory to the root of the repo.
 3. Type `expo start` to spin-up a local development server.
 4. Allow private network access when prompted by the firewall dialogue.
 
