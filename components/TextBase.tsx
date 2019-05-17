@@ -1,8 +1,12 @@
 import React from "react";
 import { Component } from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, StyleProp, Text, TextStyle } from "react-native";
 
-export default class TextBase extends Component {
+interface TextBaseProps {
+    style?: StyleProp<TextStyle>;
+}
+
+export default class TextBase extends Component<TextBaseProps> {
     render() {
         return <Text
             style={styles.text}
@@ -13,6 +17,7 @@ export default class TextBase extends Component {
 
 const styles = StyleSheet.create({
     text: {
+        fontFamily: "lucida-grande-regular",
         color: "white"
     }
 });

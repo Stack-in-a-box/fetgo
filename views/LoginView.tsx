@@ -1,38 +1,41 @@
+import PageTitle from "components/PageTitle";
 import React from "react";
 import SimpleText from "components/SimpleText";
-import { Button, CheckBox, StyleSheet, TextInput, View } from "react-native";
+import { Button, CheckBox } from "react-native-elements";
+import { StyleSheet, TextInput, View } from "react-native";
 import { Component } from "react";
 
 export default class LoginView extends Component {
     render() {
-        return (
-            <View style={styles.container}>
-                <SimpleText>Welcome to FetGo</SimpleText>
-                <SimpleText>Please log into your FetLife account to continue…</SimpleText>
+        return <View style={styles.container}>
+            <PageTitle>Welcome to FetGo</PageTitle>
+            <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
+            <View>
                 <View>
                     <View>
-                        <View>
-                            <SimpleText>Username / email address:</SimpleText>
-                            <TextInput />
-                        </View>
-                        <View>
-                            <SimpleText>Password:</SimpleText>
-                            <TextInput />
-                        </View>
-                        <View>
-                            <CheckBox />
-                            <SimpleText>Remember me</SimpleText>
-                        </View>
+                        <SimpleText>Username / email address:</SimpleText>
+                        <TextInput />
                     </View>
                     <View>
-                        <Button
-                            title="Log-in"
-                            onPress={() => alert("Login button pressed.")}
-                        />
+                        <SimpleText>Password:</SimpleText>
+                        <TextInput />
                     </View>
+                    <CheckBox
+                        title="Remember me"
+                        textStyle={styles.checkboxText}
+                        containerStyle={styles.checkboxContainer}
+                        checked={false}
+                    />
+                </View>
+                <View>
+                    <Button
+                        title="Log-in"
+                        buttonStyle={styles.button}
+                        onPress={() => alert("Login button pressed.")}
+                    />
                 </View>
             </View>
-        );
+        </View>;
     }
 }
 
@@ -42,5 +45,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "black",
+    },
+    checkboxContainer: {
+        borderWidth: 0,
+        backgroundColor: "black"
+    },
+    checkboxText: {
+        fontFamily: "lucida-grande-regular",
+        color: "white"
+    },
+    button: {
+        backgroundColor: "red"
     }
 });
