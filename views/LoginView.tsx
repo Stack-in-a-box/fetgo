@@ -1,6 +1,6 @@
-import PageTitle from "components/PageTitle";
+import PageTitle from "components/text/PageTitle";
 import React from "react";
-import SimpleText from "components/SimpleText";
+import SimpleText from "components/text/SimpleText";
 import { Button, CheckBox } from "react-native-elements";
 import { StyleSheet, TextInput, View } from "react-native";
 import { Component } from "react";

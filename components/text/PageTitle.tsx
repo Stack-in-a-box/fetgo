@@ -1,5 +1,5 @@
 import React from "react";
-import TextBase from "components/TextBase";
+import TextBase from "components/text/TextBase";
 import { StyleSheet } from "react-native";
 
 export default class PageTitle extends TextBase {
