@@ -8,7 +8,7 @@ interface AppState {
     fontsAreLoaded?: boolean;
 }
 
-export default class App extends Component<any, AppState> {
+export default class App extends Component<{}, AppState> {
     constructor(props: any) {
         super(props);
         this.state = { fontsAreLoaded: false };
