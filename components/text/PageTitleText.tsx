@@ -3,7 +3,7 @@ import TextBase from "components/text/TextBase";
 import { Component } from "react";
 import { StyleSheet } from "react-native";
 
-export default class PageTitle extends Component {
+export default class PageTitleText extends Component {
     render() {
         return <TextBase
             style={styles.text}

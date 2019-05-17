@@ -1,15 +1,16 @@
-import PageTitle from "components/text/PageTitle";
+import PageTitleText from "components/text/PageTitleText";
 import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
 import SimpleCheckbox from "components/checkboxes/SimpleCheckbox";
 import SimpleText from "components/text/SimpleText";
-import { StyleSheet, TextInput, View } from "react-native";
+import ViewBase from "views/ViewBase";
 import { Component } from "react";
+import { TextInput, View } from "react-native";
 
 export default class LoginView extends Component {
     render() {
-        return <View style={styles.container}>
-            <PageTitle>Welcome to FetGo</PageTitle>
+        return <ViewBase>
+            <PageTitleText>Welcome to FetGo</PageTitleText>
             <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
             <View>
                 <View>
@@ -27,15 +28,6 @@ export default class LoginView extends Component {
                     <SimpleButton title="Log-in" />
                 </View>
             </View>
-        </View>;
+        </ViewBase>;
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "black",
-    }
-});
