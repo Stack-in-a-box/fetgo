@@ -1,7 +1,8 @@
 import PageTitle from "components/text/PageTitle";
 import React from "react";
+import SimpleButton from "components/buttons/SimpleButton";
 import SimpleText from "components/text/SimpleText";
-import { Button, CheckBox } from "react-native-elements";
+import { CheckBox } from "react-native-elements";
 import { StyleSheet, TextInput, View } from "react-native";
 import { Component } from "react";
 
@@ -22,17 +23,13 @@ export default class LoginView extends Component {
                     </View>
                     <CheckBox
                         title="Remember me"
-                        textStyle={styles.checkboxText}
+                        titleProps={{ style: styles.checkboxText }}
                         containerStyle={styles.checkboxContainer}
                         checked={false}
                     />
                 </View>
                 <View>
-                    <Button
-                        title="Log-in"
-                        buttonStyle={styles.button}
-                        onPress={() => alert("Login button pressed.")}
-                    />
+                    <SimpleButton title="Log-in" />
                 </View>
             </View>
         </View>;
@@ -53,8 +50,5 @@ const styles = StyleSheet.create({
     checkboxText: {
         fontFamily: "lucida-grande-regular",
         color: "white"
-    },
-    button: {
-        backgroundColor: "red"
     }
 });

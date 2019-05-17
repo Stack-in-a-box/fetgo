@@ -8,9 +8,11 @@ interface TextBaseProps {
 
 export default class TextBase extends Component<TextBaseProps> {
     render() {
+        const { children, style } = this.props;
+
         return <Text
-            style={styles.text}
-            {...this.props}
+            style={Object.assign({}, styles.text, style)}
+            children={children}
         />;
     }
 }

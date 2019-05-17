@@ -1,12 +1,13 @@
 import React from "react";
 import TextBase from "components/text/TextBase";
+import { Component } from "react";
 import { StyleSheet } from "react-native";
 
-export default class PageTitle extends TextBase {
+export default class PageTitle extends Component {
     render() {
         return <TextBase
             style={styles.text}
-            {...this.props}
+            children={this.props.children}
         />;
     }
 }
