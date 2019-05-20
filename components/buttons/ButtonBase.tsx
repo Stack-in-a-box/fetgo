@@ -23,7 +23,7 @@ export default class ButtonBase extends Component<ButtonBaseProps> {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: "red"
+        backgroundColor: "#AA0000"
     },
     title: {
         fontFamily: "lucida-grande-regular"
