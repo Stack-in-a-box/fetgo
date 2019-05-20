@@ -6,6 +6,7 @@ import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
 import SimpleCheckbox from "components/checkboxes/SimpleCheckbox";
 import SimpleField from "components/fields/SimpleField";
+import SimpleImage from "components/images/SimpleImage";
 import SimplePanel from "components/panels/SimplePanel";
 import SimpleText from "components/text/SimpleText";
 import { Component } from "react";
@@ -24,6 +25,10 @@ export default class LoginView extends Component {
     private titles() {
         return (
             <SimplePanel style={styles.titlesContainer}>
+                <SimpleImage
+                    source={require("assets/transparent.png")}
+                    scale={100}
+                />
                 <PageTitleText>Welcome to FetGo</PageTitleText>
                 <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
             </SimplePanel>
