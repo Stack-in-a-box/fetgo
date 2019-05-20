@@ -20,6 +20,6 @@ export default class TextBase extends Component<TextBaseProps> {
 const styles = StyleSheet.create({
     text: {
         fontFamily: "lucida-grande-regular",
-        color: "white"
+        color: "#9C9C9C"
     }
 });
