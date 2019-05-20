@@ -14,31 +14,64 @@ import { StyleSheet } from "react-native";
 export default class LoginView extends Component {
     render() {
         return <ContentView>
+            {this.titles()}
+            {this.form()}
+        </ContentView>;
+    }
+
+    private titles() {
+        return <SimplePanel style={styles.titlesContainer}>
             <PageTitleText>Welcome to FetGo</PageTitleText>
             <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
-            <SimplePanel style={styles.formPanelContainer}>
-                <FormPanel style={styles.formPanel}>
-                    <SimplePanel style={styles.fieldsContainer}>
-                        <SimplePanel>
-                            <SimpleText>Username / email address:</SimpleText>
-                            <SimpleField />
-                        </SimplePanel>
-                        <SimplePanel style={styles.passwordPanel}>
-                            <SimpleText>Password:</SimpleText>
-                            <PasswordField />
-                        </SimplePanel>
-                        <SimpleCheckbox title="Remember me" />
-                    </SimplePanel>
-                    <SimplePanel style={styles.buttonPanel}>
-                        <SimpleButton title="Log-in" />
-                    </SimplePanel>
-                </FormPanel>
-            </SimplePanel>
-        </ContentView>;
+        </SimplePanel>;
+    }
+
+    private form() {
+        return <SimplePanel style={styles.formPanelContainer}>
+            <FormPanel style={styles.formPanel}>
+                {this.fields()}
+                {this.button()}
+            </FormPanel>
+        </SimplePanel>;
+    }
+
+    private fields() {
+        return <SimplePanel style={styles.fieldsContainer}>
+            {this.username()}
+            {this.password()}
+            {this.remember()}
+        </SimplePanel>;
+    }
+
+    private username() {
+        return <SimplePanel>
+            <SimpleText>Username / email address:</SimpleText>
+            <SimpleField />
+        </SimplePanel>;
+    }
+
+    private password() {
+        return <SimplePanel style={styles.passwordPanel}>
+            <SimpleText>Password:</SimpleText>
+            <PasswordField />
+        </SimplePanel>;
+    }
+
+    private remember() {
+        return <SimpleCheckbox title="Remember me" />;
+    }
+
+    private button() {
+        return <SimplePanel style={styles.buttonPanel}>
+            <SimpleButton title="Log-in" />
+        </SimplePanel>;
     }
 }
 
 const styles = StyleSheet.create({
+    titlesContainer: {
+        alignItems: "center"
+    },
     formPanelContainer: {
         width: "100%"
     },
