@@ -1,4 +1,4 @@
-import PanelBase from "./PanelBase";
+import PanelBase from "components/panels/PanelBase";
 import React from "react";
 import { Component } from "react";
 import { StyleSheet } from "react-native";

@@ -4,9 +4,10 @@ import PageTitleText from "components/text/PageTitleText";
 import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
 import SimpleCheckbox from "components/checkboxes/SimpleCheckbox";
+import SimpleField from "components/fields/SimpleField";
 import SimpleText from "components/text/SimpleText";
 import { Component } from "react";
-import { TextInput, View } from "react-native";
+import { View } from "react-native";
 
 export default class LoginView extends Component {
     render() {
@@ -17,11 +18,11 @@ export default class LoginView extends Component {
                 <View>
                     <View>
                         <SimpleText>Username / email address:</SimpleText>
-                        <TextInput />
+                        <SimpleField />
                     </View>
                     <View>
                         <SimpleText>Password:</SimpleText>
-                        <TextInput />
+                        <SimpleField />
                     </View>
                     <SimpleCheckbox title="Remember me" />
                 </View>
