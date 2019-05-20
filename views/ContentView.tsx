@@ -13,6 +13,6 @@ export default class ContentView extends Component {
 
 const styles = StyleSheet.create({
     view: {
-        backgroundColor: "#1B1B1D"
+        backgroundColor: "#1B1B1B"
     }
 });

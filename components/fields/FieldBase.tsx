@@ -10,6 +10,11 @@ export default class FieldBase extends Component {
 
 const styles = StyleSheet.create({
     field: {
-
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 2,
+        paddingBottom: 4,
+        backgroundColor: "#404040",
+        color: "#CCCCCC"
     }
 });

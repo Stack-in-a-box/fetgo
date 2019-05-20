@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: "lucida-grande-regular",
-        color: "white"
+        color: "#CCCCCC"
     }
 });
