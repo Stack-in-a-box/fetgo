@@ -9,8 +9,10 @@ interface SimplePanelProps {
 
 export default class SimplePanel extends Component<SimplePanelProps> {
     render() {
-        return <PanelBase style={this.props.style}>
-            {this.props.children}
-        </PanelBase>
+        return (
+            <PanelBase style={this.props.style}>
+                {this.props.children}
+            </PanelBase>
+        );
     }
 }

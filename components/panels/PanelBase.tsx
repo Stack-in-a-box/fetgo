@@ -8,8 +8,10 @@ interface PanelBaseProps {
 
 export default class PanelBase extends Component<PanelBaseProps> {
     render() {
-        return <View style={this.props.style}>
-            {this.props.children}
-        </View>
+        return (
+            <View style={this.props.style}>
+                {this.props.children}
+            </View>
+        );
     }
 }

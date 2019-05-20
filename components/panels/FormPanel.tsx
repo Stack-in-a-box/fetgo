@@ -9,9 +9,11 @@ interface FormPanelProps {
 
 export default class FormPanel extends Component<FormPanelProps> {
     render() {
-        return <PanelBase style={Object.assign({}, styles.panel, this.props.style)}>
-            {this.props.children}
-        </PanelBase>
+        return (
+            <PanelBase style={Object.assign({}, styles.panel, this.props.style)}>
+                {this.props.children}
+            </PanelBase>
+        );
     }
 }
 

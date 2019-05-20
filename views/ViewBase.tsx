@@ -8,9 +8,11 @@ interface ViewBaseProps {
 
 export default class ViewBase extends Component<ViewBaseProps> {
     render() {
-        return <View style={Object.assign({}, styles.view, this.props.style)}>
-            {this.props.children}
-        </View>
+        return (
+            <View style={Object.assign({}, styles.view, this.props.style)}>
+                {this.props.children}
+            </View>
+        );
     }
 }
 
