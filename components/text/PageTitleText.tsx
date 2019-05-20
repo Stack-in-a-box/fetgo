@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "lucida-grande-bold",
         fontSize: 30,
-        color: "red"
+        color: "#E00000"
     }
 });

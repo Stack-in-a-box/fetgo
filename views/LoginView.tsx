@@ -27,7 +27,7 @@ export default class LoginView extends Component {
             <SimplePanel style={styles.titlesContainer}>
                 <SimpleImage
                     source={require("assets/transparent.png")}
-                    scale={100}
+                    scale={110}
                 />
                 <PageTitleText>Welcome to FetGo</PageTitleText>
                 <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
