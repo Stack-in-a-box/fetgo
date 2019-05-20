@@ -13,6 +13,7 @@ export default class FormPanel extends Component {
 
 const styles = StyleSheet.create({
     panel: {
+        padding: 13,
         backgroundColor: "#101010"
     }
 });
