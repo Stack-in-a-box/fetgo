@@ -1,6 +1,7 @@
 import ContentView from "views/ContentView";
 import FormPanel from "components/panels/FormPanel";
 import PageTitleText from "components/text/PageTitleText";
+import PasswordField from "components/fields/PasswordField";
 import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
 import SimpleCheckbox from "components/checkboxes/SimpleCheckbox";
@@ -22,7 +23,7 @@ export default class LoginView extends Component {
                     </View>
                     <View>
                         <SimpleText>Password:</SimpleText>
-                        <SimpleField />
+                        <PasswordField />
                     </View>
                     <SimpleCheckbox title="Remember me" />
                 </View>
