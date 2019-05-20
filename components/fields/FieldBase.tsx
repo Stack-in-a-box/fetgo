@@ -17,12 +17,13 @@ export default class FieldBase extends Component<FieldBaseProps> {
 
 const styles = StyleSheet.create({
     field: {
-        marginTop: 3,
-        marginBottom: 3,
+        marginTop: 5,
+        marginBottom: 5,
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 2,
         paddingBottom: 2,
+        borderRadius: 3,
         backgroundColor: "#404040",
         color: "#CCCCCC"
     }

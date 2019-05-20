@@ -1,11 +1,15 @@
 import PanelBase from "components/panels/PanelBase";
 import React from "react";
 import { Component } from "react";
-import { StyleSheet } from "react-native";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 
-export default class FormPanel extends Component {
+interface FormPanelProps {
+    style?: StyleProp<ViewStyle>;
+}
+
+export default class FormPanel extends Component<FormPanelProps> {
     render() {
-        return <PanelBase style={styles.panel}>
+        return <PanelBase style={Object.assign({}, styles.panel, this.props.style)}>
             {this.props.children}
         </PanelBase>
     }
@@ -13,7 +17,7 @@ export default class FormPanel extends Component {
 
 const styles = StyleSheet.create({
     panel: {
-        padding: 13,
+        borderRadius: 5,
         backgroundColor: "#101010"
     }
 });
