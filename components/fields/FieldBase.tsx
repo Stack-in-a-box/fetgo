@@ -6,11 +6,28 @@ interface FieldBaseProps {
     shouldObfuscateText?: boolean;
 }
 
-export default class FieldBase extends Component<FieldBaseProps> {
+interface FieldBaseState {
+    isFocused?: boolean;
+}
+
+export default class FieldBase extends Component<FieldBaseProps, FieldBaseState> {
+    constructor(props: FieldBaseProps) {
+        super(props);
+        this.state = { isFocused: false };
+    }
+
     render() {
+        const style = Object.assign(
+            {},
+            styles.field,
+            this.state.isFocused ? styles.focused : {}
+        );
+
         return <TextInput
-            style={styles.field}
+            style={style}
             secureTextEntry={this.props.shouldObfuscateText}
+            onFocus={() => this.setState({ isFocused: true })}
+            onBlur={() => this.setState({ isFocused: false})}
         />;
     }
 }
@@ -23,8 +40,13 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingTop: 2,
         paddingBottom: 2,
-        borderRadius: 3,
+        borderRadius: 4,
+        borderWidth: 2,
         backgroundColor: "#404040",
+        borderColor: "#404040",
         color: "#CCCCCC"
+    },
+    focused: {
+        borderColor: "#666666"
     }
 });
