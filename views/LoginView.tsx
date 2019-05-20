@@ -1,4 +1,5 @@
 import ContentView from "views/ContentView";
+import FormPanel from "components/panels/FormPanel";
 import PageTitleText from "components/text/PageTitleText";
 import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
@@ -12,7 +13,7 @@ export default class LoginView extends Component {
         return <ContentView>
             <PageTitleText>Welcome to FetGo</PageTitleText>
             <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
-            <View>
+            <FormPanel>
                 <View>
                     <View>
                         <SimpleText>Username / email address:</SimpleText>
@@ -27,7 +28,7 @@ export default class LoginView extends Component {
                 <View>
                     <SimpleButton title="Log-in" />
                 </View>
-            </View>
+            </FormPanel>
         </ContentView>;
     }
 }

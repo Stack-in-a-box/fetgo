@@ -36,7 +36,7 @@ export default class CheckboxBase extends Component<CheckboxBaseProps, CheckboxB
 const styles = StyleSheet.create({
     container: {
         borderWidth: 0,
-        backgroundColor: "black"
+        backgroundColor: "transparent"
     },
     title: {
         fontFamily: "lucida-grande-regular",
