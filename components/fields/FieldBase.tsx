@@ -17,6 +17,8 @@ export default class FieldBase extends Component<FieldBaseProps> {
 
 const styles = StyleSheet.create({
     field: {
+        marginTop: 3,
+        marginBottom: 3,
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 2,
