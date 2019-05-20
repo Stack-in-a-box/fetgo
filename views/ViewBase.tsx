@@ -1,10 +1,14 @@
 import React from "react";
 import { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 
-export default class ViewBase extends Component {
+interface ViewBaseProps {
+    style?: StyleProp<ViewStyle>
+}
+
+export default class ViewBase extends Component<ViewBaseProps> {
     render() {
-        return <View style={styles.view}>
+        return <View style={Object.assign({}, styles.view, this.props.style)}>
             {this.props.children}
         </View>
     }

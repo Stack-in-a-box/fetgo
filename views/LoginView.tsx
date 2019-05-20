@@ -1,15 +1,15 @@
+import ContentView from "views/ContentView";
 import PageTitleText from "components/text/PageTitleText";
 import React from "react";
 import SimpleButton from "components/buttons/SimpleButton";
 import SimpleCheckbox from "components/checkboxes/SimpleCheckbox";
 import SimpleText from "components/text/SimpleText";
-import ViewBase from "views/ViewBase";
 import { Component } from "react";
 import { TextInput, View } from "react-native";
 
 export default class LoginView extends Component {
     render() {
-        return <ViewBase>
+        return <ContentView>
             <PageTitleText>Welcome to FetGo</PageTitleText>
             <SimpleText>Please log into your FetLife™ account to continue…</SimpleText>
             <View>
@@ -28,6 +28,6 @@ export default class LoginView extends Component {
                     <SimpleButton title="Log-in" />
                 </View>
             </View>
-        </ViewBase>;
+        </ContentView>;
     }
 }
