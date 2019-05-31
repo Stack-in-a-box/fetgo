@@ -27,6 +27,10 @@ export default class CheckboxBase extends Component<CheckboxBaseProps, CheckboxB
             title={this.props.title}
             containerStyle={Object.assign({}, styles.container, containerStyle)}
             titleProps={{ style: Object.assign({}, styles.title, titleStyle) }}
+            iconType="material"
+            uncheckedIcon="check-box-outline-blank"
+            uncheckedColor="#404040"
+            checkedIcon="check-box"
             checked={isChecked}
             onPress={() => this.setState({ isChecked: !isChecked })}
         />;
@@ -39,6 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: "transparent"
     },
     title: {
+        marginLeft: 5,
         fontFamily: "lucida-grande-regular",
         color: "#CCCCCC"
     }
