@@ -1,3 +1,5 @@
+<img src="screenshot.png" alt="Log-in Page Screenshot" align="right" height="412px">
+
 # <img src="icon.png" alt="Icon" height="23px"> FetGo
 
 ## Development
